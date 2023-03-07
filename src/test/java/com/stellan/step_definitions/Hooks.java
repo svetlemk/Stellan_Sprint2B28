@@ -5,6 +5,7 @@ import com.stellan.utilities.Driver;
 import com.stellan.utilities.BrowserUtils;
 import com.stellan.utilities.Driver;
 import io.cucumber.java.After;
+import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
 import io.cucumber.java.BeforeStep;
 
@@ -26,11 +27,12 @@ public class Hooks {
         Driver.closeDriver();
     }
 
-    @BeforeStep
+   // @BeforeStep
     public void setupStep(){
         System.out.println("--->@BeforeStep running before each step ");
     }
 
+   // @AfterStep
     public void teardownStep(){
         System.out.println("--->@AfterStep running after each step");
     }
