@@ -13,6 +13,9 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class US01_StepDefs {
 
     @Given("User is on the log in page")
@@ -79,13 +82,14 @@ public class US01_StepDefs {
     }
 
     Company_btn_menu companyBtnMenu = new Company_btn_menu();
+
     @When("users click the Company module")
     public void usersClickTheCompanyModule() {
 
         companyBtnMenu.company_btn.click();
 
     }
-
+/*
     @Then("verify the users see flowing {int} options:")
     public void verifyTheUsersSeeFlowingOptions(int arg0) {
 
@@ -112,6 +116,17 @@ public class US01_StepDefs {
         Assert.assertEquals(actual_menu_button_6.getText(),expected_menu_button_6);
         Assert.assertEquals(actual_menu_button_7.getText(),expected_menu_button_7);
 
+ */
+
+        @Then("verify the users see flowing {int} options:")
+        public void verify_the_users_see_flowing_options(List<String> expectedList) {
+
+            List<String> actualList = new ArrayList<>(); // new empty List
+
+            for (WebElement each : companyBtnMenu.CompanyBtnList) {
+                actualList.add(each.getText());
+                Assert.assertEquals(expectedList,actualList);
+            }
 
 
 
