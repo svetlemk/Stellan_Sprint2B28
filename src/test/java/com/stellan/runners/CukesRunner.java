@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
         features="src/test/resources/features", // features from resources- features
         glue="com/stellan/step_definitions", // step definitions// we wrote before using Gherkin language
         dryRun = false,   // turn on and off running of the step definitions//don't execute the code, but generate the snippets
-        tags="@TC014",
+        tags="@TC003",
         publish = true
 )
 public class CukesRunner {

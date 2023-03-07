@@ -78,7 +78,7 @@ public class US01_StepDefs {
     @Then("verify the user back to the login page")
     public void verifyTheUserBackToTheLoginPage() {
 
-        BrowserUtils.verifyTitleContains("logout=yes");
+       BrowserUtils.verifyTitle("Authorization");
     }
 
     Company_btn_menu companyBtnMenu = new Company_btn_menu();
@@ -118,15 +118,15 @@ public class US01_StepDefs {
 
  */
 
-        @Then("verify the users see flowing {int} options:")
+        @Then("verify the users see flowing 7 options:")
         public void verify_the_users_see_flowing_options(List<String> expectedList) {
 
             List<String> actualList = new ArrayList<>(); // new empty List
 
             for (WebElement each : companyBtnMenu.CompanyBtnList) {
                 actualList.add(each.getText());
-                Assert.assertEquals(expectedList,actualList);
             }
+            Assert.assertEquals(expectedList,actualList);
 
 
 

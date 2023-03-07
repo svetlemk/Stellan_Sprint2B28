@@ -14,7 +14,7 @@ public class CRM_log_out {
     @FindBy(id="user-block")
     public WebElement user_btn;
 
-    @FindBy(css = "a[href='/auth/?logout=yes&backurl=%2Fabout%2F']")
+    @FindBy(xpath = "//span[.='Log out']")
     public WebElement log_out_btn;
 
 

@@ -1,7 +1,6 @@
 Feature: As a user, I should be able to access to the Company page.
 
   Background:
-  Scenario: Login for all US
     Given User is on the log in page
     When User enters username
     And User enters password
