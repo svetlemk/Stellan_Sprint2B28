@@ -4,10 +4,9 @@ import com.stellan.utilities.BrowserUtils;
 import com.stellan.utilities.Driver;
 import com.stellan.utilities.BrowserUtils;
 import com.stellan.utilities.Driver;
-import io.cucumber.java.After;
-import io.cucumber.java.AfterStep;
-import io.cucumber.java.Before;
-import io.cucumber.java.BeforeStep;
+import io.cucumber.java.*;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 
 /*
 iN this class we will be able to create "pre" and "post" condition
@@ -21,7 +20,14 @@ public class Hooks {
     }
 
     @After // from cucumber
-    public void tearDownMethod(){
+    public void tearDownMethod(Scenario scenario){
+
+        if (scenario.isFailed()){ // if this is true, in case to not make screenshot everytime...
+
+            byte[] screenshot  = ((TakesScreenshot)Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+            scenario.attach(screenshot,"image/png", scenario.getName());
+        }
+
         System.out.println("--->@After running after each scenario");
         BrowserUtils.sleep(3);
         Driver.closeDriver();
