@@ -19,7 +19,6 @@ for ALL of the scenarios or even steps
 public class Hooks {
     //import the @Before coming from io.cucumber.java
 
-    //import the @Before coming from io.cucumber.java
     @Before (order = 1)
     public void setupMethod(){
 
