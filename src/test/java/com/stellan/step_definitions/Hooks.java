@@ -6,6 +6,9 @@ import com.stellan.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.BeforeStep;
+import io.cucumber.java.Scenario;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 
 import java.time.Duration;
 
@@ -26,20 +29,19 @@ public class Hooks {
     }
 
 
-    @After // from cucumber
-    public void tearDownMethod(){
-        System.out.println("--->@After running after each scenario");
-        BrowserUtils.sleep(3);
-        Driver.closeDriver();
+  // from cucumber
+    @After
+    public void teardownMethod(Scenario scenario) {
+
+        if (scenario.isFailed()) {
+
+            byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+            scenario.attach(screenshot, "image/png", scenario.getName());
+
+        }
+
+
     }
 
-    @BeforeStep
-    public void setupStep(){
-        System.out.println("--->@BeforeStep running before each step ");
-    }
-
-    public void teardownStep(){
-        System.out.println("--->@AfterStep running after each step");
-    }
 
 }
