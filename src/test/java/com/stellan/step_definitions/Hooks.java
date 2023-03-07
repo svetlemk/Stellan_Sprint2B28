@@ -1,12 +1,9 @@
 package com.stellan.step_definitions;
 
+import com.stellan.utilities.*;
 import com.stellan.utilities.BrowserUtils;
 import com.stellan.utilities.Driver;
-import com.stellan.utilities.BrowserUtils;
-import com.stellan.utilities.Driver;
-import io.cucumber.java.*;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
+
 
 /*
 iN this class we will be able to create "pre" and "post" condition
@@ -14,10 +11,7 @@ for ALL of the scenarios or even steps
  */
 public class Hooks {
     //import the @Before coming from io.cucumber.java
-    @Before
-    public void setUpMethod(){
-        System.out.println("@Before Running before each scenario");
-    }
+
 
     @After // from cucumber
     public void tearDownMethod(Scenario scenario){
@@ -41,6 +35,31 @@ public class Hooks {
    // @AfterStep
     public void teardownStep(){
         System.out.println("--->@AfterStep running after each step");
+
+    //import the @Before coming from io.cucumber.java
+    @Before (order = 1)
+    public void setupMethod(){
+
+        Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+
+        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
     }
+
+
+  // from cucumber
+    @After
+    public void teardownMethod(Scenario scenario) {
+
+        if (scenario.isFailed()) {
+
+            byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+            scenario.attach(screenshot, "image/png", scenario.getName());
+
+        }
+
+
+
+    }
+
 
 }
