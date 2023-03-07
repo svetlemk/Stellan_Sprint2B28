@@ -1,7 +1,11 @@
 Feature: As a user, I should be able to access to the Company page.
 
   Background:
-    Given users are on the homepage
+  Scenario: Login for all US
+    Given User is on the log in page
+    When User enters username
+    And User enters password
+    Then User clicks Log in button
 
   @TC014
   Scenario:  Verify users see the 7 modules in the Company page shown as design
@@ -11,8 +15,8 @@ Feature: As a user, I should be able to access to the Company page.
       | Official Information |
       | Our Life             |
       | About Company        |
-      | Photo Company        |
-      | Video.               |
+      | Photo Gallery        |
+      | Video                |
       | Business News(RSS)   |
       | Career               |
 

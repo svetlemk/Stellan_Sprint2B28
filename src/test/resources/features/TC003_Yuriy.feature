@@ -1,7 +1,11 @@
 Feature: As a user, I should be able to logout.
 
   Background:
-    Given users are on the homepage
+  Scenario: Login for all US
+    Given User is on the log in page
+    When User enters username
+    And User enters password
+    Then User clicks Log in button
 
   @TC003
   Scenario: Verify theUsers log out from the app
