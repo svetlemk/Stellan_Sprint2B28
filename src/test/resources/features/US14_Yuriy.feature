@@ -6,7 +6,7 @@ Feature: As a user, I should be able to access to the Company page.
     And User enters password
     Then User clicks Log in button
 
-  @TC14
+  @US14
   Scenario:  Verify users see the 7 modules in the Company page shown as design
 
     When users click the Company module

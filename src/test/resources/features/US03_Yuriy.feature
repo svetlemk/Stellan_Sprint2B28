@@ -6,7 +6,7 @@ Feature: As a user, I should be able to logout.
     And User enters password
     Then User clicks Log in button
 
-  @TC03
+  @US03
   Scenario: Verify theUsers log out from the app
 
     When users click the user profile name
