@@ -1,23 +1,31 @@
 package com.stellan.step_definitions;
 
 import com.stellan.pages.ChatAndCallsPage_Dauren;
-import com.stellan.pages.LoginPage_Dauren;
-import com.stellan.utilities.ConfigurationReader;
 import com.stellan.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.util.concurrent.TimeUnit;
 
 public class US08_StepDefs {
-
-    LoginPage_Dauren loginPage_dauren = new LoginPage_Dauren();
     ChatAndCallsPage_Dauren chatAndCallsPage_dauren = new ChatAndCallsPage_Dauren();
 
     @Given("users are on the homepage")
     public void users_are_on_the_homepage() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("azulCrmUrl"));
-        loginPage_dauren.login();
+
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get("https://qa.azulcrm.com/");
+
+        chatAndCallsPage_dauren.emailBox.sendKeys("hr5@cybertekschool.com");
+        chatAndCallsPage_dauren.passwordBox.sendKeys("UserUser");
+        chatAndCallsPage_dauren.logInBtn.click();
     }
     @When("users click the Chat and Calls module")
     public void users_click_the_chat_and_calls_module() throws Throwable {

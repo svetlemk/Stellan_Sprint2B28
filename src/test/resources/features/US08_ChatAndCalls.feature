@@ -1,4 +1,4 @@
-Feature: AzulCRM functionality 08 - access Chat and Calls module
+Feature: US08 - access Chat and Calls module
   Agile story: As a user, I should be able to access the Chat and Calls module.
 
   @regression
