@@ -48,10 +48,13 @@ public class US01_StepDefs {
     }
 
 
-    @Then("User clicks Log in button and see correct title")
-    public void userClicksLogInButtonAndSeeCorrectTitle() {
-        loginPage.loginButton.click();
+    @Then("User see {string} message")
+    public void userSeeMessage(String expectedMessage) {
 
-        Driver.closeDriver();
+        String actualMessage = loginPage.errorMessage.getText();
+
+        Assert.assertEquals(actualMessage, expectedMessage);
+
+
     }
 }

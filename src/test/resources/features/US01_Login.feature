@@ -10,11 +10,11 @@ Feature: Login feature
     And User enters password
     Then User clicks Log in button
 
-  Scenario Outline: User should be able to log in to the with valid credentials
+  Scenario Outline: User should be able to log in with valid credentials
     Given User is on the log in page
     When User enters username "<username>"
     And User enters password "<password>"
-    Then User clicks Log in button and see correct title
+    Then User clicks Log in button
 
     Examples:
       | username                      | password |
@@ -31,5 +31,25 @@ Feature: Login feature
       | marketing3@cybertekschool.com | UserUser |
       | marketing4@cybertekschool.com | UserUser |
 
+  Scenario Outline: User should see "Incorrect username or password" message when enters the wrong username or password.
+    Given User is on the log in page
+    When User enters username "<username>"
+    And User enters password "<password>"
+    Then User clicks Log in button
+    Then User see "Incorrect username or password" message
 
+    Examples:
+      | username               | password |
+      | hr2@cybertekschool.com | 1234567a |
+      #| hr3@cybertekschool.com        | UserUser |
+      #| hr4@cybertekschool.com        | UserUser |
+      #| hr@cybertekschool.com        | useruser |
+      #| helpdesk1@cybertekschool.com  | UserUser |
+      #| helpdesk2@cybertekschool.com  | UserUser |
+      | helpdesk3@gmail.com    | UserUser |
+      #| helpdesk4@cybertekschool.com  | UserUser |
+      #| marketing1@cybertekschool.com | UserUser |
+      #| marketing2@cybertekschool.com | UserUser |
+      | marketing@cybertek.com | 1234567a |
+      #| marketing4@cybertekschool.com | UserUser |
 
