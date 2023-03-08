@@ -17,34 +17,12 @@ public class US01_StepDefs {
     }
 
     LoginPage loginPage = new LoginPage();
-    @When("User enters username")
-    public void user_enters_username() {
 
-        loginPage.username.sendKeys("hr1@cybertekschool.com");
+    @When("User enters username {string} and password {string}")
+    public void userEntersUsernameAndPassword(String username, String password) {
 
-    }
-    @When("User enters password")
-    public void user_enters_password() {
+        loginPage.login(username,password);
 
-        loginPage.password.sendKeys("UserUser");
-
-    }
-    @Then("User clicks Log in button")
-    public void user_clicks_button() {
-
-        loginPage.loginButton.click();
-
-    }
-
-
-    @When("User enters username {string}")
-    public void userEntersUsername(String arg0) {
-        loginPage.username.sendKeys(arg0);
-    }
-
-    @And("User enters password {string}")
-    public void userEntersPassword(String arg0) {
-        loginPage.password.sendKeys(arg0);
     }
 
 
@@ -55,6 +33,16 @@ public class US01_StepDefs {
 
         Assert.assertEquals(actualMessage, expectedMessage);
 
+
+    }
+
+
+    @Then("User should see correct title")
+    public void userShouldSeeDashboard() {
+        String actualTitle = Driver.getDriver().getTitle();
+        String expectedTitle = "Portal";
+
+        Assert.assertTrue(actualTitle.contains(expectedTitle));
 
     }
 }
