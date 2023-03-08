@@ -21,5 +21,8 @@ public class LoginPage {
     public WebElement loginButton;
 
 
+    @FindBy(xpath = "//div[@class='errortext']")
+    public WebElement errorMessage;
+
 
 }
