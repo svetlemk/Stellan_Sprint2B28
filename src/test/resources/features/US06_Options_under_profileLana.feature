@@ -1,3 +1,5 @@
+
+@wip
 Feature:Options visibility
 
   User story: As a user,
@@ -5,13 +7,10 @@ Feature:Options visibility
 
   Background:
     Given User is on the log in page
-    When User enters username
-    And User enters password
-    Then User clicks Log in button
+    When User enters username "hr1@cybertekschool.com" and password "UserUser"
+    Then User on the homepage
 
-@wip
   Scenario:  Verify the users view all options under the profile
-    Given users are on the homepage
     When users click the profile name
     Then verify the users see following 5 options:
       | My Profile              |
