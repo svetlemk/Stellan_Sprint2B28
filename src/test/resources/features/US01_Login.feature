@@ -7,6 +7,7 @@ Feature: Login feature
   Scenario: Login for all US
     Given User is on the log in page
     When User enters username "hr1@cybertekschool.com" and password "UserUser"
+    Then User on the homepage
 
 
   Scenario Outline: User should be able to log in with valid credentials
