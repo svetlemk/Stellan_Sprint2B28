@@ -3,7 +3,6 @@ package com.stellan.step_definitions;
 import com.stellan.pages.LoginPage;
 import com.stellan.utilities.ConfigurationReader;
 import com.stellan.utilities.Driver;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -44,5 +43,10 @@ public class US01_StepDefs {
 
         Assert.assertTrue(actualTitle.contains(expectedTitle));
 
+    }
+
+    @When("User enter username {string} and password {string}")
+    public void userEnterUsernameAndPassword(String username, String password) {
+        loginPage.login(username,password);
     }
 }

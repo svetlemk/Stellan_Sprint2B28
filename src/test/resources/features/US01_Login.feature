@@ -11,7 +11,7 @@ Feature: Login feature
 
   Scenario Outline: User should be able to log in with valid credentials
     Given User is on the log in page
-    When User enters username "<username>" and password "<password>"
+    When User enter username "<username>" and password "<password>"
     Then User should see correct title
 
     Examples:
