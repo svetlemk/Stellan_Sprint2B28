@@ -1,4 +1,4 @@
-Feature: Driver page modules verification
+Feature: Drive page modules verification
 
   User Story:
   As a user, I want to access the Drive page.
