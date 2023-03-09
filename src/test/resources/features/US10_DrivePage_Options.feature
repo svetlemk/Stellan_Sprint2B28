@@ -12,8 +12,6 @@ Feature: Driver page modules verification
     When  User clicks on the Driver icon on the homepage
     Then  Verify if user sees all following 5 <modules>:
 
-    Examples:
-      | modules                 |
       | Driver                     |
       | All Documents              |
       | Company Drive              |
