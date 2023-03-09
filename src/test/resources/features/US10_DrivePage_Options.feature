@@ -9,7 +9,7 @@ Feature: Drive page modules verification
     Then User on the homepage
 
   Scenario: Verify the users view all modules in the Drive page.
-    When  User clicks on the Driver icon on the homepage
+    When  User clicks on the Drive icon on the homepage
     Then  Verify if user sees all following 5 <modules>:
 
       | Driver                     |
