@@ -12,7 +12,7 @@ Feature: Drive page modules verification
     When  User clicks on the Drive icon on the homepage
     Then  Verify if user sees all following 5 modules:
 
-      | Driver                     |
+      | Drive                   |
       | All Documents              |
       | Company Drive              |
       | Sales and Marketing        |
