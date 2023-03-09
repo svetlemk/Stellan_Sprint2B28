@@ -10,7 +10,7 @@ Feature: Driver page options verification
     Then  User clicks Log in button
 
   Scenario Outline :Verify the users view all modules in the Drive page.
-    Given User on the Driver page
+    Given User on the homepage
     When  User clicks on the Driver icon on the home page
     Then  Verify the user see all following 5 <options>:
 
