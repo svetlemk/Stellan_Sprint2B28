@@ -3,7 +3,6 @@ package com.stellan.step_definitions;
 import com.stellan.pages.LoginPage;
 import com.stellan.utilities.ConfigurationReader;
 import com.stellan.utilities.Driver;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -44,5 +43,11 @@ public class US01_StepDefs {
 
         Assert.assertTrue(actualTitle.contains(expectedTitle));
 
+    }
+
+
+    @Then("User on the homepage")
+    public void userOnTheHomepage() {
+        System.out.println("User is on a homepage");
     }
 }
