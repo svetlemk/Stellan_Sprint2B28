@@ -1,4 +1,4 @@
-Feature:
+Feature: Driver page options verification
 
   User Story:
   As a user, I want to access the Drive page.
