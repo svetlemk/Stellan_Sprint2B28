@@ -1,3 +1,4 @@
+@wip
 Feature: Drive page modules verification
 
   User Story:
@@ -7,7 +8,7 @@ Feature: Drive page modules verification
     Given User is on the log in page
     When User enters username "hr1@cybertekschool.com" and password "UserUser"
     Then User on the homepage
-
+@wip
   Scenario: Verify the users view all modules on the Drive page.
     When  User clicks on the Drive icon on the homepage
     Then  Verify if user sees all following 5 modules:
