@@ -7,18 +7,17 @@ import org.openqa.selenium.support.PageFactory;
 
 public class DrivePage_Ai {
 
-
-    public void DrivePage_Ai(){
+    public DrivePage_Ai(){
         PageFactory.initElements(Driver.getDriver(),this);
 
     }
 
     @FindBy(xpath = "(//a[@title='Drive'])")
-    WebElement drivePageIcon;
+    public WebElement drivePageIcon;
 
 
     @FindBy(xpath = "(//div[@id='top_menu_id_docs'])")
-    WebElement drivePageModules;
+    public WebElement drivePageModules;
 
 
 
