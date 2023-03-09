@@ -5,7 +5,7 @@ Feature:
 
   Scenario Outline :Verify the users view all modules in the Drive page.
     Given : User on the Driver page
-    When : User click on the Driver icon on the home page
+    When : User clicks on the Driver icon on the home page
     Then : Verify the user see all following 5 <options>:
 
     Examples:
