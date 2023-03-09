@@ -6,9 +6,10 @@ Feature: Driver page options verification
   Background:
     Given User is on the log in page
     When User enters username "hr1@cybertekschool.com" and password "UserUser"
+    Then User on the homepage
 
   Scenario Outline :Verify the users view all modules in the Drive page.
-    Given user is on the homepage
+
     When  User clicks on the Driver icon on the homepage
     Then  Verify the user see all following 5 <options>:
 
