@@ -11,10 +11,10 @@ Feature: Driver page options verification
   Scenario Outline :Verify the users view all modules in the Drive page.
 
     When  User clicks on the Driver icon on the homepage
-    Then  Verify the user see all following 5 <options>:
+    Then  Verify if user see all following 5 <modules>:
 
     Examples:
-      | options                    |
+      | modules                 |
       | Driver                     |
       | All Documents              |
       | Company Drive              |
