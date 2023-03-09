@@ -7,11 +7,12 @@ Feature: Login feature
   Scenario: Login for all US
     Given User is on the log in page
     When User enters username "hr1@cybertekschool.com" and password "UserUser"
+    Then User on the homepage
 
 
   Scenario Outline: User should be able to log in with valid credentials
     Given User is on the log in page
-    When User enter username "<username>" and password "<password>"
+    When User enters username "<username>" and password "<password>"
     Then User should see correct title
 
     Examples:

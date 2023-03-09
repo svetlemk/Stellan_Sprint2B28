@@ -45,8 +45,9 @@ public class US01_StepDefs {
 
     }
 
-    @When("User enter username {string} and password {string}")
-    public void userEnterUsernameAndPassword(String username, String password) {
-        loginPage.login(username,password);
+
+    @Then("User on the homepage")
+    public void userOnTheHomepage() {
+        System.out.println("User is on a homepage");
     }
 }
