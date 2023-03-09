@@ -5,19 +5,20 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class DriverPage_Ai {
+import java.util.List;
 
+public class DriverPage_Ai {
     public void DriverPage_Ai(){
         PageFactory.initElements(Driver.getDriver(),this);
 
     }
 
     @FindBy(xpath = "(//a[@title='Drive'])")
-    WebElement DrivePageIcon;
+    WebElement drivePageIcon;
 
 
     @FindBy(xpath = "(//div[@id='top_menu_id_docs'])")
-    WebElement DriverPageModules;
+    WebElement driverPageModules;
 
 
 
