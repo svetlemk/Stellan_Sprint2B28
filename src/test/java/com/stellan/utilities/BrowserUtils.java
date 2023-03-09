@@ -6,6 +6,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 public class BrowserUtils {
@@ -72,6 +74,13 @@ public class BrowserUtils {
         // wait object is ready to be used to create specific expected conditions
         wait.until(ExpectedConditions.titleContains(title));
 
+    }
+    public static List<String> getElementsText(List<WebElement> list) {
+        List<String> elemTexts = new ArrayList<>();
+        for (WebElement el : list) {
+            elemTexts.add(el.getText());
+        }
+        return elemTexts;
     }
 }
 

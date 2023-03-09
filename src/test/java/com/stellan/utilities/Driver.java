@@ -2,6 +2,7 @@ package com.stellan.utilities;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.time.Duration;
@@ -35,15 +36,17 @@ public class Driver {
             switch(browserType){
                 case "chrome":
                    // WebDriverManager.chromedriver().setup(); --->>> we dont need it anymore
-                    driver = new ChromeDriver();
+                    ChromeOptions options = new ChromeOptions();
+                    options.addArguments("--remote-allow-origins=*");
+                    driver = new ChromeDriver(options);
                     driver.manage().window().maximize();
-                    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+                    //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
                     break;
                 case "firefox":
                    // WebDriverManager.firefoxdriver().setup(); //--> we dont need it any more
                     driver = new FirefoxDriver();
                     driver.manage().window().maximize();
-                    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+                   // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
                     break;
             }
 

@@ -21,5 +21,13 @@ public class LoginPage {
     public WebElement loginButton;
 
 
+    @FindBy(xpath = "//div[@class='errortext']")
+    public WebElement errorMessage;
+
+    public void login(String usernameStr, String passwordStr){
+        username.sendKeys(usernameStr);
+        password.sendKeys(passwordStr);
+        loginButton.click();
+    }
 
 }

@@ -50,4 +50,3 @@ Feature: Login feature
       #| marketing@cybertek.com | 1234567a |
       #| marketing4@cybertekschool.com | UserUser |
 
-
