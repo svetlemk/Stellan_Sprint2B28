@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class DrivePage_Ai {
 
     public DrivePage_Ai(){
@@ -17,7 +19,7 @@ public class DrivePage_Ai {
 
 
     @FindBy(xpath = "(//div[@id='top_menu_id_docs'])")
-    public WebElement drivePageModules;
+    public List<WebElement> actualListDriveModules;
 
 
 }
