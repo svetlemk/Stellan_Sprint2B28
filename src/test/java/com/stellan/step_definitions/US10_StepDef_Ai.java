@@ -8,7 +8,8 @@ public class US10_StepDef_Ai {
     public void userClicksOnTheDriverIconOnTheHomepage() {
     }
 
-    @Then("Verify if user see all following {int} <modules>:")
+    @Then("Verify if user sees all following {int} <modules>:")
     public void verifyIfUserSeeAllFollowingModules(int arg0) {
     }
+
 }
