@@ -10,11 +10,12 @@ Feature: Driver page options verification
 
     Examples:
       | options                    |
+      | Driver                     |
       | All Documents              |
       | Company Drive              |
       | Sales and Marketing        |
       | Top Management's documents |
-      | Drive Cleanup              |
+
 
 
 
