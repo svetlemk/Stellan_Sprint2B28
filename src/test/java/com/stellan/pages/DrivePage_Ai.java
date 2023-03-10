@@ -14,12 +14,13 @@ public class DrivePage_Ai {
 
     }
 
-    @FindBy(xpath = "(//a[@title='Drive'])")
+    @FindBy(xpath = "//a[@title='Drive']")
     public WebElement drivePageIcon;
 
 
-    @FindBy(xpath = "(//div[@id='top_menu_id_docs'])")
+    @FindBy(xpath = "//span[@class='main-buttons-item-text-title']")
     public List<WebElement> actualListDriveModules;
+
 
 
 }
