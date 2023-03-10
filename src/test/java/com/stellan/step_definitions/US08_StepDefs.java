@@ -23,7 +23,6 @@ public class US08_StepDefs {
         homePage.chatAndCallsButton.click();
 
     }
-
     @Then("verify the users see following 4 options:")
     public void verifyTheUsersSeeFlowingOptions(List<String> expectedOptions) {
         List<String> actualOptions = BrowserUtils.getElementsText(homePage.chatAndCallsOptions);
