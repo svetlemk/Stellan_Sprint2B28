@@ -2,9 +2,8 @@ Feature: As a user, I should be able to logout.
 
   Background:
     Given User is on the log in page
-    When User enters username
-    And User enters password
-    Then User clicks Log in button
+    When User enters username "hr1@cybertekschool.com" and password "UserUser"
+    Then User on the homepage
 
   @US03
   Scenario: Verify theUsers log out from the app
