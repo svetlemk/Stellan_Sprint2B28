@@ -1,17 +1,19 @@
 Feature: US08 - access Chat and Calls module
   Agile story: As a user, I should be able to access the Chat and Calls module.
 
-  @regression
+  Background:
+    Given User is on the log in page
+    When User enters username
+    And User enters password
+    Then User clicks Log in button
+
   Scenario: Verify the users view all options in the Chat and Calls module
     Given users are on the homepage
-    When users click the Chat and Calls module
-    Then users see a Message button icon
-    And user should see a Notifications button icon
-    And user should see a Settings button icon
-    And user should see a Activity Stream button icon
+    When users click the CHAT and Calls module
+    Then verify the users see following 4 options:
+      |Message      |
+      |Notifications|
+      |Settings     |
+      |Active Stream|
 
 
-
-
-    #MAC --> command + shift + L
-    #WINDOWS --> control + Alt + L
