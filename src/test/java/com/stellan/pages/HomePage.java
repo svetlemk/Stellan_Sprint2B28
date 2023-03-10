@@ -36,5 +36,9 @@ public class HomePage extends LoginPage {
     @FindBy(xpath = "(//div[@class='b24-app-block-content'])[1]")   //US04
     public WebElement operationSystems;
 
+    @FindBy(xpath = "//a[@title='Drive']")
+    public WebElement drivePageIcon; //Ai
 
+    @FindBy(xpath = "//span[@class='main-buttons-item-text-title']")
+    public List<WebElement> actualListDriveModules; // Ai
 }
