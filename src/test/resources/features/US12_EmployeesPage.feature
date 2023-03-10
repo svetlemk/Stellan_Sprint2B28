@@ -11,7 +11,11 @@ Feature: Access the Employees Page
   Birthdays
   New page
 
+Background:
+  Given User is on the log in page
+  When User enters username "hr1@cybertekschool.com" and password "UserUser"
+  Then User on the homepage
+
   Scenario: Verification of access to all modules in the Employees page
-  Given User is logged into NextBaseCRM
-  When User clicks onto Employees Page
-  Then User will be able to view all modules
+    When user clicks onto Employees page
+    Then User will be able to view all modules
