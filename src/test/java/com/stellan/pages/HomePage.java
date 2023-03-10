@@ -27,4 +27,9 @@ public class HomePage {
     public List<WebElement> chatAndCallsOptions;
 
 
+    @FindBy(xpath="(//div[@class='b24-app-block-content'])[1]")   //US04
+    public WebElement operationSystems;
+
+
+
 }
