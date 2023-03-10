@@ -20,7 +20,7 @@ public class US12_StepDefs {
         loginPage.loginButton.click();
     }
 
-    @When("User clicks onto Employees Page")
+    @When("user clicks onto Employees page")
     public void userClicksOntoEmployeesPage() {
         homepage.EmployeesPage.click();
     }
