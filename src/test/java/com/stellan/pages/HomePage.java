@@ -20,5 +20,11 @@ public class HomePage {
     public List<WebElement> actualListWebElements;
     //span[@class='menu-popup-item-text']
 
+    @FindBy(xpath = "//span[normalize-space()='Chat and Calls']")  //US08
+    public WebElement chatAndCallsButton;
+
+    @FindBy(xpath = "//div[@class='bx-desktop-appearance-tab']//span/..")  //US08
+    public List<WebElement> chatAndCallsOptions;
+
 
 }
