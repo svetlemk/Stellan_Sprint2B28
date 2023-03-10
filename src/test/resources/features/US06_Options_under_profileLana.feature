@@ -1,5 +1,5 @@
 
-@wip
+
 Feature:Options visibility
 
   User story: As a user,
