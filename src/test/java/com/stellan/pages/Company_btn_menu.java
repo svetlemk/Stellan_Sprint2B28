@@ -14,7 +14,7 @@ public class Company_btn_menu {
     }
 
     @FindBy(xpath = "//div[contains(@class,'main-buttons-inner-container')]/div")
-    public List<WebElement> CompanyBtnList; //list of WebElement becouse locator lacating 8 of them
+    public List<WebElement> CompanyBtnList; //list of WebElement because locator locating 8 of them
 
     @FindBy(xpath = "(//span[@class='menu-item-link-text'])[12]")
     public WebElement company_btn;

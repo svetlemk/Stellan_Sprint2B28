@@ -20,9 +20,28 @@ public class LoginPage {
     @FindBy(xpath = "//input[@type='submit']")
     public WebElement loginButton;
 
-
     @FindBy(xpath = "//div[@class='errortext']")
     public WebElement errorMessage;
+
+
+
+    // LoginPage features by Vasyl
+    @FindBy(xpath = "//label[@for='USER_REMEMBER']")
+    public WebElement rememberMeOnThisComputer;
+
+
+    @FindBy (xpath = "//input[@id='USER_REMEMBER']")
+    public WebElement checkBoxRememberMe;
+
+    @FindBy (xpath = "//a[@class='login-link-forgot-pass']")
+    public WebElement forgotPassword;
+
+
+
+
+
+
+
 
     public void login(String usernameStr, String passwordStr){
         username.sendKeys(usernameStr);
