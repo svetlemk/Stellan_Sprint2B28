@@ -1,6 +1,6 @@
 package com.stellan.step_definitions;
 
-import com.stellan.pages.ChatAndCallsPage_Dauren;
+import com.stellan.pages.HomePage;
 import com.stellan.utilities.BrowserUtils;
 import com.stellan.utilities.Driver;
 import io.cucumber.java.en.And;
@@ -16,17 +16,17 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class US08_StepDefs {
-    ChatAndCallsPage_Dauren chatAndCallsPage_dauren = new ChatAndCallsPage_Dauren();
+    HomePage homePage = new HomePage();
 
     @When("users click the CHAT and Calls module")
     public void usersClickTheCHATAndCallsModule() {
-        chatAndCallsPage_dauren.chatAndCallsButton.click();
+        homePage.chatAndCallsButton.click();
 
     }
 
     @Then("verify the users see following 4 options:")
     public void verifyTheUsersSeeFlowingOptions(List<String> expectedOptions) {
-        List<String> actualOptions = BrowserUtils.getElementsText(chatAndCallsPage_dauren.chatAndCallsOptions);
+        List<String> actualOptions = BrowserUtils.getElementsText(homePage.chatAndCallsOptions);
         Assert.assertEquals(expectedOptions, actualOptions);
 
     }
