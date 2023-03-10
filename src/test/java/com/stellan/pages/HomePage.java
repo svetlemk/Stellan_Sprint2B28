@@ -41,4 +41,10 @@ public class HomePage extends LoginPage {
 
     @FindBy(xpath = "//span[@class='main-buttons-item-text-title']")
     public List<WebElement> actualListDriveModules; // Ai
+
+    @FindBy(xpath = "//div[contains(@class,'main-buttons-inner-container')]/div")//urko
+    public List<WebElement> CompanyBtnList; //list of WebElement becouse locator lacating 8 of them
+
+    @FindBy(xpath = "(//span[@class='menu-item-link-text'])[12]")
+    public WebElement company_btn; //urko
 }
