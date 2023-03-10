@@ -1,6 +1,6 @@
 package com.stellan.step_definitions;
 
-import com.stellan.pages.Company_btn_menu;
+import com.stellan.pages.HomePage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -11,12 +11,12 @@ import java.util.List;
 
 public class US14_Yuriy_StepDef {
 
-    Company_btn_menu companyBtnMenu = new Company_btn_menu();
+    HomePage homePage = new HomePage();
 
     @When("users click the Company module")
     public void usersClickTheCompanyModule() {
 
-        companyBtnMenu.company_btn.click();
+        homePage.company_btn.click();
 
     }
 
@@ -25,7 +25,7 @@ public class US14_Yuriy_StepDef {
 
         List<String> actualList = new ArrayList<>(); // new empty List
 
-        for (WebElement each : companyBtnMenu.CompanyBtnList) {
+        for (WebElement each : homePage.CompanyBtnList) {
             actualList.add(each.getText());
         }
         Assert.assertEquals(expectedList, actualList);
