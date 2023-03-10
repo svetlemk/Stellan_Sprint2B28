@@ -30,8 +30,11 @@ public class HomePage {
     public WebElement TimeAndReports  ;
 
     @FindBy(xpath="//span[@class='main-buttons-item-text-title']")
-
     public List<WebElement> TimeAndReportsModules ;
 
 
-}
+    @FindBy(xpath="(//div[@class='b24-app-block-content'])[1]")   //US04
+    public WebElement operationSystems;
+
+
+
