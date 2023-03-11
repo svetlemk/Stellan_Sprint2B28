@@ -30,7 +30,7 @@ public class US06_StepDefinitions_Lana {
         Assert.assertEquals(expectedList,actualList);
          }
          */
-
+        BrowserUtils.sleep(1);
        List<String> actualList = BrowserUtils.getElementsText(homePage.actualListWebElements);
 
        Assert.assertEquals(expectedList,actualList);
