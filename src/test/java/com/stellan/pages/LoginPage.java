@@ -27,14 +27,14 @@ public class LoginPage {
 
     // LoginPage features by Vasyl
     @FindBy(xpath = "//label[@for='USER_REMEMBER']")
-    public WebElement rememberMeOnThisComputer;
+    public WebElement rememberMeOnThisComputer; //US02_Vasyl
 
 
     @FindBy (xpath = "//input[@id='USER_REMEMBER']")
-    public WebElement checkBoxRememberMe;
+    public WebElement checkBoxRememberMe; //US02_Vasyl
 
     @FindBy (xpath = "//a[@class='login-link-forgot-pass']")
-    public WebElement forgotPassword;
+    public WebElement forgotPassword; //US02_Vasyl
 
 
 
